@@ -32,7 +32,6 @@ function findMiddleIndex(arr, n)
         for(let c = i+2; c <= n; c++){
             rightSum += +arr[c]
         }
-        console.log(rightSum, leftSum)
         if(rightSum == leftSum){
             return i+1
         }
@@ -42,10 +41,11 @@ function findMiddleIndex(arr, n)
 function determineWetherThereAreTwoSubarrays(){
     const arrString = document.getElementById("arrayInput").value;
     const arr = arrString.split(' ')
+   
     n = arr.length -1;
     const index = findMiddleIndex(arr,n)
     let message;
-    if(index === -1 || index === n){
+    if(index === -1 || index === n || n == 0){
         message = "Cannot be found, invalid array" 
     }
     else{
