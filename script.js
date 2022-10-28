@@ -5,8 +5,12 @@ body.addEventListener("mousemove", function(event) {
 
 const ball = document.querySelectorAll('.ball')
 const ans = document.querySelector('.answer')
-const width = window.innerWidth;
-const height = window.innerHeight;
+let width = window.innerWidth;
+let height = window.innerHeight;
+window.addEventListener("resize", function() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+  });
 function changeBalls(){
   ball.forEach(b => {
     let c = Math.floor(Math.random()*16777215).toString(16);
