@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    text-align: center;
+    color: white;
+    width: 350px;
+    height: 450px;
+    background-color: #363636;
+}
+.monthpick{
+    margin-bottom:30px ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,60px);
+}
+.days span{
+    transition: 0.5s;
+    cursor: pointer;
+}
+.days span:hover{
+    transition: 0.5s;
+    background-color: #a720201a;
+}
+.dayNames{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
