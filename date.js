@@ -26,7 +26,6 @@ month.innerHTML = months[currMonth]
 
 function getDays(y,m){
     const numOfDays = new Date(y, m+1, 0).getDate();
-    console.log(numOfDays)
     pick.innerHTML = ''
     for(let i = 1; i <= numOfDays; i++){
         let newDate = new Date(y,m,i)
